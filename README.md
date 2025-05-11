@@ -36,32 +36,34 @@ This repository provides automated tests for the Android application QA Code Cha
 
 ## Introduction
 
-This repository provides automated tests for the Android application [Your Application Name]. The goal is to ensure the application's stability and reliability by automating key functionalities using Appium for mobile automation.
+This repository provides automated tests for the Android application QA Code Challenge. The goal is to ensure the application's stability and reliability by automating key functionalities using Appium for mobile automation.
 
 ## Project Structure
 
+´´´
 qacodechallengeHostelWorld/
-.idea/
-src/
-    main/
-        java/
-            Android/
-                Android_BaseTest.java # Base class for Android tests (setup, teardown)
-                Android_Environment.java # Environment-related configurations
-                Android_Locators.java # Centralized locators for Android elements
-                Android_TestUtilities.java # Utility functions for Android tests
-            Strings/
-    resources/
-        log4j2.xml # Logging configuration
-test/
-    Android/
-        Login1stTime/ # Test cases for the initial login flow
-        LoginScreen/ # Test cases for the login screen
-TestSuites/
-    AndroidTests_FullRegression.xml # TestNG suite for full regression testing
-target/
-pom.xml # Maven project configuration
-README.md # This file
+├── .idea/
+├── src/
+│   ├── main/
+│   │   └── java/
+│   │       └── Android/
+│   │           ├── Android_BaseTest.java        # Base class for Android tests (setup, teardown)
+│   │           ├── Android_Environment.java     # Environment-related configurations
+│   │           ├── Android_Locators.java        # Centralized locators for Android elements
+│   │           └── Android_TestUtilities.java   # Utility functions for Android tests
+│   │       └── Strings/
+│   ├── resources/
+│   │   └── log4j2.xml                          # Logging configuration
+├── test/
+│   └── Android/
+│       ├── Login1stTime/                      # Test cases for the initial login flow
+│       └── LoginScreen/                       # Test cases for the login screen
+├── TestSuites/
+│   └── AndroidTests_FullRegression.xml      # TestNG suite for full regression testing
+├── target/
+├── pom.xml                                  # Maven project configuration
+└── README.md                                # This file
+´´´
 
 **Explanation of Key Directories:**
 
