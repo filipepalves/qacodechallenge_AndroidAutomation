@@ -18,17 +18,7 @@ This repository contains automated test suites for the QA Code Challenge Android
 
 ## Introduction
 
-This repository provides automated tests for the Android application [Your Application Name]. The goal is to ensure the application's stability and reliability by automating key functionalities using Appium for mobile automation.
-
-## Project Structure
-
-Okay, I understand. Based on the project structure you've shown, here's an adapted README in English, keeping in mind the structure you currently have:
-
-Markdown
-
-# Automated Tests for [Your Application Name] (Appium - Android)
-
-This repository contains automated test suites for the [Your Application Name] Android application, developed by [Your Name], using Appium with Java and the Page Object Model (POM) pattern.
+This repository provides automated tests for the Android application QA Code Challenge. The goal is to ensure the application's stability and reliability by automating key functionalities using Appium for mobile automation.
 
 ## Table of Contents
 
@@ -56,22 +46,22 @@ qacodechallengeHostelWorld/
 │   ├── main/
 │   │   └── java/
 │   │       └── Android/
-│   │           ├── Android_BaseTest.java
-│   │           ├── Android_Environment.java
-│   │           ├── Android_Locators.java
-│   │           └── Android_TestUtilities.java
+│   │           ├── Android_BaseTest.java        # Base class for Android tests (setup, teardown)
+│   │           ├── Android_Environment.java     # Environment-related configurations
+│   │           ├── Android_Locators.java        # Centralized locators for Android elements
+│   │           └── Android_TestUtilities.java   # Utility functions for Android tests
 │   │       └── Strings/
 │   ├── resources/
-│   │   └── log4j2.xml
+│   │   └── log4j2.xml                          # Logging configuration
 ├── test/
 │   └── Android/
-│       ├── Login1stTime/
-│       └── LoginScreen/
+│       ├── Login1stTime/                      # Test cases for the initial login flow
+│       └── LoginScreen/                       # Test cases for the login screen
 ├── TestSuites/
-│   └── AndroidTests_FullRegression.xml
+│   └── AndroidTests_FullRegression.xml      # TestNG suite for full regression testing
 ├── target/
-├── pom.xml
-└── README.md
+├── pom.xml                                  # Maven project configuration
+└── README.md                                # This file
 
 **Explanation of Key Directories:**
 
@@ -101,7 +91,7 @@ Ensure you have the following installed:
 
 1.  **Clone the Repository:**
     ```bash
-    git clone <YOUR_GIT_REPOSITORY_URL>
+    git clone <github.com/filipepalves/qacodechallengeHostelWorld/>
     cd qacodechallengeHostelWorld
     ```
 
@@ -135,16 +125,10 @@ You can execute the tests using Maven and TestNG:
     mvn -Dsurefire.suiteXmlFiles=TestSuites/AndroidTests_FullRegression.xml test
     ```
 
-3.  **Run tests by tag or group (if configured in TestNG):**
+3.  **Run a specific test class:**
     ```bash
-    mvn -Dgroups="<group_name>" test
+    mvn -Dtest=com.Android.LoginScreen test
     ```
-
-4.  **Run a specific test class:**
-    ```bash
-    mvn -Dtest=com.Android.LoginScreen.YourLoginTestClass test
-    ```
-    (Replace `com.Android.LoginScreen.YourLoginTestClass` with the fully qualified name of your test class).
 
 ## Appium Configuration (Capabilities)
 
