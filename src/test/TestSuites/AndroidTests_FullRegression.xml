@@ -1,0 +1,18 @@
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+
+<suite name="Android Tests" verbose="1">
+
+    <test name="Login1stTime">
+        <parameter name="environment" value="cleancache"/>
+        <classes>
+            <class name="test.Android.Login1stTime"/>
+        </classes>
+    </test>
+
+    <test name="LoginScreen">
+        <classes>
+            <class name="test.Android.LoginScreen"/>
+        </classes>
+    </test>
+
+</suite>
