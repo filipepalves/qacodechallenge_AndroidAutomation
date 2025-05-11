@@ -1,13 +1,7 @@
 package test.Android;
 
 import main.java.Android.Android_BaseTest;
-import org.openqa.selenium.WebElement;
-import org.openqa.selenium.support.ui.ExpectedConditions;
-import org.testng.annotations.AfterTest;
 import org.testng.annotations.Test;
-
-import java.util.List;
-
 import static main.java.Android.Android_Locators.*;
 import static main.java.Android.Android_TestUtilities.*;
 import static main.java.Strings.*;
@@ -18,7 +12,7 @@ public class Login1stTime extends Android_BaseTest {
 
 
     @Test
-    public void login1sttimeTest() throws InterruptedException {
+    public void login1sttimeTest() {
 
         log.info("\u001B[32mStarting Login1stTime\u001B[0m");
 
