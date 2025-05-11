@@ -20,27 +20,10 @@ This repository contains automated test suites for the QA Code Challenge Android
 
 This repository provides automated tests for the Android application QA Code Challenge. The goal is to ensure the application's stability and reliability by automating key functionalities using Appium for mobile automation.
 
-## Table of Contents
-
-- [Introduction](#introduction)
-- [Project Structure](#project-structure)
-- [Setup](#setup)
-- [Test Organization](#test-organization)
-- [Authentication (Android)](#authentication-android)
-- [Running Tests](#running-tests)
-- [Appium Configuration (Capabilities)](#appium-configuration-capabilities)
-- [Reporting](#reporting)
-- [Resources](#resources)
-- [Troubleshooting](#troubleshooting)
-- [License](#license)
-
-## Introduction
-
-This repository provides automated tests for the Android application QA Code Challenge. The goal is to ensure the application's stability and reliability by automating key functionalities using Appium for mobile automation.
-
 ## Project Structure
 
-´´´
+```
+
 qacodechallengeHostelWorld/
 ├── .idea/
 ├── src/
@@ -63,7 +46,8 @@ qacodechallengeHostelWorld/
 ├── target/
 ├── pom.xml                                  # Maven project configuration
 └── README.md                                # This file
-´´´
+```
+
 
 **Explanation of Key Directories:**
 
