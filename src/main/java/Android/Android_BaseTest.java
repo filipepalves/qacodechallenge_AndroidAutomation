@@ -42,6 +42,8 @@ public class Android_BaseTest {
 
     @AfterClass
     public void tearDown() {
+        driver.terminateApp("com.hostelworld.qacodechallenge");
         driver.quit();
     }
+
 }

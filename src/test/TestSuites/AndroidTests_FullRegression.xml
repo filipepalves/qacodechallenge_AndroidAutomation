@@ -2,16 +2,21 @@
 
 <suite name="Android Tests" verbose="1">
 
-    <test name="Login1stTime">
-        <parameter name="environment" value="cleancache"/>
+    <test name="AccountCreation">
         <classes>
-            <class name="test.Android.Login1stTime"/>
+            <class name="test.Android.AccountCreation.accountcreationhappypath"/>
+        </classes>
+    </test>
+
+    <test name="AccountCreationFieldsBlank">
+        <classes>
+            <class name="test.Android.AccountCreation.accountcreationfieldsblank"/>
         </classes>
     </test>
 
     <test name="LoginScreen">
         <classes>
-            <class name="test.Android.LoginScreen"/>
+            <class name="test.Android.LoginScreen.loginscreenhappypath"/>
         </classes>
     </test>
 

@@ -28,12 +28,12 @@ public class Android_Environment {
 
             UiAutomator2Options options = new UiAutomator2Options();
             options.setPlatformName("Android");
-            options.setDeviceName("2C091JEGR06259");
+            options.setDeviceName("emulator-5554");
+            //options.setDeviceName("2C091JEGR06259");
             options.setCapability("LANGUAGE", "en_EN");
             options.setCapability("LOCALE", "EN");
             options.setCapability("javascriptEnabled", true);
             options.setAppPackage("com.hostelworld.qacodechallenge");
-            options.setAppActivity("com.hostelworld.qacodechallenge.LoginActivity");
             options.setNoReset(true);
             log.info("Setting environment to: main");
 

@@ -4,7 +4,7 @@ import org.openqa.selenium.By;
 
 public class Android_Locators {
 
-    public static final By qaCodeChallengeTitle = By.className("android.widget.TextView");
+    public static final By qaCodeChallengeTitle = By.xpath("//android.widget.TextView[@text=\"QA Code Challenge\"]");
     public static final By createAccountButton = By.id("com.hostelworld.qacodechallenge:id/btnCreateAccount");
     public static final By loginButton = By.id("com.hostelworld.qacodechallenge:id/btnLogin");
     public static final By firstNameInput = By.id("com.hostelworld.qacodechallenge:id/firstNameEt");
