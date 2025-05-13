@@ -49,7 +49,6 @@ jobs:
 
       - name: Start Appium Server
         run: appium --log-level debug --port 4723 &
-        background: true
         continue-on-error: true
 
       - name: Wait for Appium Server

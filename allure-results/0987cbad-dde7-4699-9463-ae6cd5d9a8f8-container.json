@@ -1,0 +1,1 @@
+{"uuid":"0987cbad-dde7-4699-9463-ae6cd5d9a8f8","name":"test.Android.LoginScreen.loginscreenhappypath","children":["171d672a-decf-46a9-8642-6cd4afaaf0d0"],"befores":[],"afters":[{"name":"tearDown","status":"passed","stage":"finished","description":"","steps":[],"attachments":[],"parameters":[],"start":1747173096707,"stop":1747173097908}],"start":1747173066373,"stop":1747173097909}

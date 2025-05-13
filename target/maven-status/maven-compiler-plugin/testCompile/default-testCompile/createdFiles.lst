@@ -1,0 +1,3 @@
+test/Android/LoginScreen/loginscreenhappypath.class
+test/Android/AccountCreation/accountcreationfieldsblank.class
+test/Android/AccountCreation/accountcreationhappypath.class
