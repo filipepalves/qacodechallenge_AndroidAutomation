@@ -13,7 +13,7 @@ public class loginscreenhappypath extends Android_BaseTest {
     @Test(priority = 1)
     public void LoginScreenTest() throws InterruptedException {
 
-        log.info("\u001B[32mStarting LoginScreen\u001B[0m");
+        System.out.println("\u001B[32mStarting LoginScreen Test\u001B[0m");
 
         // Due to the fact that the app doesn't have DB, I must create an account first.
 
@@ -61,7 +61,9 @@ public class loginscreenhappypath extends Android_BaseTest {
         tapElement(logoutButton);
         webElementIsNotDisplayed(logoutButton);
 
-        log.info("Home page it's as expected.");
+        System.out.println("Home page it's as expected.");
+
+        System.out.println("\u001B[32mFinishing LoginScreen Test\u001B[0m");
 
 
 

@@ -12,7 +12,7 @@ public class accountcreationhappypath extends Android_BaseTest {
     @Test
     public void accountCreation() {
 
-        log.info("\u001B[32mStarting Happy Path for Account Creation\u001B[0m");
+        System.out.println("\u001B[32mStarting Happy Path for Account Creation\u001B[0m");
 
         // Verify Main Screen
 
@@ -20,7 +20,7 @@ public class accountcreationhappypath extends Android_BaseTest {
         verifyText(createAccountButton, createAccountText);
         verifyText(loginButton, loginButtonText);
 
-        log.info("The Main screen it's as expected.");
+        System.out.println("The Main screen it's as expected.");
 
         // Create Account
 
@@ -33,7 +33,7 @@ public class accountcreationhappypath extends Android_BaseTest {
         verifyText(emailInput, emailTitle);
         verifyText(createAccountButton, createAccountText);
 
-        log.info("The Account Creation screen it's as expected.");
+        System.out.println("The Account Creation screen it's as expected.");
 
         sendKeysToElement(firstNameInput, "Filipe");
         sendKeysToElement(lastNameInput, "Alves");
@@ -45,9 +45,9 @@ public class accountcreationhappypath extends Android_BaseTest {
         verifyText(createAccountButton, createAccountText);
         verifyText(loginButton, loginButtonText);
 
-        log.info("The Account Creation is working as expected.");
+        System.out.println("The Account Creation is working as expected.");
 
-        log.info("\u001B[31mFinishing Happy Path for Account Creation\u001B[0m");
+        System.out.println("\u001B[31mFinishing Happy Path for Account Creation\u001B[0m");
 
     }
 }

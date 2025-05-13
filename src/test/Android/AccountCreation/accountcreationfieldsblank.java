@@ -13,7 +13,7 @@ public class accountcreationfieldsblank extends Android_BaseTest {
     @Test
     public void accountCreation_fieldsBlank() {
 
-        log.info("\u001B[32mStarting Account Creation - Fields Blank\u001B[0m");
+        System.out.println("\u001B[32mStarting Account Creation - Fields Blank\u001B[0m");
 
         verifyText(qaCodeChallengeTitle, title);
         tapElement(createAccountButton);
@@ -41,9 +41,9 @@ public class accountcreationfieldsblank extends Android_BaseTest {
         tapElement(createAccountButton);
         webElementIsNotDisplayed(firstNameInput);
 
-        log.info("All the fields are working as expected.");
+        System.out.println("All the fields are working as expected.");
 
-        log.info("\u001B[31mFinishing Account Creation - Fields Blank\u001B[0m");
+        System.out.println("\u001B[31mFinishing Account Creation - Fields Blank\u001B[0m");
 
     }
 }
