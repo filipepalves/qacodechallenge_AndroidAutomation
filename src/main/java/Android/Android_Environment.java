@@ -26,7 +26,7 @@ public class Android_Environment {
             options.setDeviceName("emulator-5554");
             options.setAppPackage("com.hostelworld.qacodechallenge");
             options.setAppActivity("com.hostelworld.qacodechallenge.MainActivity");
-            options.setNoReset(true);
+            options.setNoReset(false);
             System.out.println("Setting environment to: " + this.environment);
 
             System.out.println("Attempting to launch app with options: " + options);
