@@ -30,6 +30,8 @@ public class loginscreenhappypath extends Android_BaseTest {
         verifyText(createAccountButton, createAccountText);
         verifyText(loginButton, loginButtonText);
 
+        System.out.println("Home page it's as expected.");
+
         // Tap on the "Login" button
 
         tapElement(loginButton);
@@ -47,6 +49,8 @@ public class loginscreenhappypath extends Android_BaseTest {
 
         webElementIsNotDisplayed(usernameEmailInput);
 
+        System.out.println("Login page it's as expected.");
+
         // Field validation Logged page
 
         verifyText(qaCodeChallengeTitle, title);
@@ -61,7 +65,7 @@ public class loginscreenhappypath extends Android_BaseTest {
         tapElement(logoutButton);
         webElementIsNotDisplayed(logoutButton);
 
-        System.out.println("Home page it's as expected.");
+        System.out.println("Logout page it's as expected.");
 
         System.out.println("\u001B[32mFinishing LoginScreen Test\u001B[0m");
 

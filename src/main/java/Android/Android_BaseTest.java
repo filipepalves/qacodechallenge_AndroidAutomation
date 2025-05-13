@@ -43,7 +43,7 @@ public class Android_BaseTest {
             Runtime.getRuntime().exec("adb shell am force-stop com.hostelworld.qacodechallenge");
         } catch (IOException e) {
             e.printStackTrace();
-            System.err.println("Falha ao forçar a parada da aplicação via ADB.");
+            System.err.println("Failed to stop app.");
         }
         driver.quit();
     }
