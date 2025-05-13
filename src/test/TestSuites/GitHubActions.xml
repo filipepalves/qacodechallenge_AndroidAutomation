@@ -1,0 +1,30 @@
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+
+<suite name="Android Tests" verbose="1">
+    <listeners>
+        <listener class-name="io.qameta.allure.testng.AllureTestNg"/>
+        <listener class-name="main.java.AllureEnvironmentListener"/>
+    </listeners>
+
+    <test name="AccountCreation">
+        <parameter name="environment" value="main"/>
+        <classes>
+            <class name="test.Android.AccountCreation.accountcreationhappypath"/>
+        </classes>
+    </test>
+
+    <test name="AccountCreationFieldsBlank">
+        <parameter name="environment" value="main"/>
+        <classes>
+            <class name="test.Android.AccountCreation.accountcreationfieldsblank"/>
+        </classes>
+    </test>
+
+    <test name="LoginScreen">
+        <parameter name="environment" value="main"/>
+        <classes>
+            <class name="test.Android.LoginScreen.loginscreenhappypath"/>
+        </classes>
+    </test>
+
+</suite>

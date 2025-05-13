@@ -50,7 +50,7 @@
               <ul>
                 <li>
                   <a href="#" panel-name="test-xml-Android_Tests" class="navigator-link ">
-                    <span>AndroidTests_FullRegression.xml</span>
+                    <span>GitHubActions.xml</span>
                   </a> <!-- navigator-link  -->
                 </li>
                 <li>
@@ -131,6 +131,21 @@
           <div class="suite-Android_Tests-class-passed">
             <div class="main-panel-header rounded-window-top">
               <img src="passed.png"/>
+              <span class="class-name">test.Android.AccountCreation.accountcreationhappypath</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="accountCreation">
+                  </a> <!-- accountCreation -->
+                  <span class="method-name">accountCreation</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-Android_Tests-class-passed -->
+          <div class="suite-Android_Tests-class-passed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="passed.png"/>
               <span class="class-name">test.Android.LoginScreen.loginscreenhappypath</span>
             </div> <!-- main-panel-header rounded-window-top -->
             <div class="main-panel-content rounded-window-bottom">
@@ -158,42 +173,34 @@
               </div> <!-- method -->
             </div> <!-- main-panel-content rounded-window-bottom -->
           </div> <!-- suite-Android_Tests-class-passed -->
-          <div class="suite-Android_Tests-class-passed">
-            <div class="main-panel-header rounded-window-top">
-              <img src="passed.png"/>
-              <span class="class-name">test.Android.AccountCreation.accountcreationhappypath</span>
-            </div> <!-- main-panel-header rounded-window-top -->
-            <div class="main-panel-content rounded-window-bottom">
-              <div class="method">
-                <div class="method-content">
-                  <a name="accountCreation">
-                  </a> <!-- accountCreation -->
-                  <span class="method-name">accountCreation</span>
-                </div> <!-- method-content -->
-              </div> <!-- method -->
-            </div> <!-- main-panel-content rounded-window-bottom -->
-          </div> <!-- suite-Android_Tests-class-passed -->
         </div> <!-- panel Android_Tests -->
         <div panel-name="test-xml-Android_Tests" class="panel">
           <div class="main-panel-header rounded-window-top">
-            <span class="header-content">/home/pintoalves/IdeaProjects/qacodechallengeHostelWorld/src/test/TestSuites/AndroidTests_FullRegression.xml</span>
+            <span class="header-content">/home/pintoalves/IdeaProjects/qacodechallengeHostelWorld/src/test/TestSuites/GitHubActions.xml</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <pre>
 &lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
 &lt;!DOCTYPE suite SYSTEM &quot;https://testng.org/testng-1.0.dtd&quot;&gt;
 &lt;suite name=&quot;Android Tests&quot; guice-stage=&quot;DEVELOPMENT&quot; verbose=&quot;0&quot;&gt;
+  &lt;listeners&gt;
+    &lt;listener class-name=&quot;io.qameta.allure.testng.AllureTestNg&quot;/&gt;
+    &lt;listener class-name=&quot;main.java.AllureEnvironmentListener&quot;/&gt;
+  &lt;/listeners&gt;
   &lt;test thread-count=&quot;5&quot; name=&quot;AccountCreation&quot; verbose=&quot;0&quot;&gt;
+    &lt;parameter name=&quot;environment&quot; value=&quot;main&quot;/&gt;
     &lt;classes&gt;
       &lt;class name=&quot;test.Android.AccountCreation.accountcreationhappypath&quot;/&gt;
     &lt;/classes&gt;
   &lt;/test&gt; &lt;!-- AccountCreation --&gt;
   &lt;test thread-count=&quot;5&quot; name=&quot;AccountCreationFieldsBlank&quot; verbose=&quot;0&quot;&gt;
+    &lt;parameter name=&quot;environment&quot; value=&quot;main&quot;/&gt;
     &lt;classes&gt;
       &lt;class name=&quot;test.Android.AccountCreation.accountcreationfieldsblank&quot;/&gt;
     &lt;/classes&gt;
   &lt;/test&gt; &lt;!-- AccountCreationFieldsBlank --&gt;
   &lt;test thread-count=&quot;5&quot; name=&quot;LoginScreen&quot; verbose=&quot;0&quot;&gt;
+    &lt;parameter name=&quot;environment&quot; value=&quot;main&quot;/&gt;
     &lt;classes&gt;
       &lt;class name=&quot;test.Android.LoginScreen.loginscreenhappypath&quot;/&gt;
     &lt;/classes&gt;
@@ -243,22 +250,22 @@ data.addColumn('string', 'Class');
 data.addColumn('number', 'Time (ms)');
 data.addRows(3);
 data.setCell(0, 0, 0)
-data.setCell(0, 1, 'accountCreation')
-data.setCell(0, 2, 'test.Android.AccountCreation.accountcreationhappypath')
-data.setCell(0, 3, 29332);
+data.setCell(0, 1, 'LoginScreenTest')
+data.setCell(0, 2, 'test.Android.LoginScreen.loginscreenhappypath')
+data.setCell(0, 3, 24751);
 data.setCell(1, 0, 1)
 data.setCell(1, 1, 'accountCreation_fieldsBlank')
 data.setCell(1, 2, 'test.Android.AccountCreation.accountcreationfieldsblank')
-data.setCell(1, 3, 24129);
+data.setCell(1, 3, 18320);
 data.setCell(2, 0, 2)
-data.setCell(2, 1, 'LoginScreenTest')
-data.setCell(2, 2, 'test.Android.LoginScreen.loginscreenhappypath')
-data.setCell(2, 3, 23326);
+data.setCell(2, 1, 'accountCreation')
+data.setCell(2, 2, 'test.Android.AccountCreation.accountcreationhappypath')
+data.setCell(2, 3, 15168);
 window.suiteTableData['Android_Tests']= { tableData: data, tableDiv: 'times-div-Android_Tests'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 1 minutes</span>
+              <span class="suite-total-time">Total running time: 58 seconds</span>
               <div id="times-div-Android_Tests">
               </div> <!-- times-div-Android_Tests -->
             </div> <!-- times-div -->
@@ -286,46 +293,46 @@ return data;
             <div class="chronological-class">
               <div class="chronological-class-name">test.Android.AccountCreation.accountcreationhappypath</div> <!-- chronological-class-name -->
               <div class="configuration-test before">
-                <span class="method-name">setUp(main, org.testng.TestRunner@46d567cb)</span>
+                <span class="method-name">setUp(main, org.testng.TestRunner@3dfa819)</span>
                 <span class="method-start">0 ms</span>
               </div> <!-- configuration-test before -->
               <div class="test-method">
                 <span class="method-name">accountCreation</span>
-                <span class="method-start">4106 ms</span>
+                <span class="method-start">7567 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-class after">
                 <span class="method-name">tearDown</span>
-                <span class="method-start">33445 ms</span>
+                <span class="method-start">22962 ms</span>
               </div> <!-- configuration-class after -->
             </div> <!-- chronological-class -->
             <div class="chronological-class">
               <div class="chronological-class-name">test.Android.AccountCreation.accountcreationfieldsblank</div> <!-- chronological-class-name -->
               <div class="configuration-test before">
-                <span class="method-name">setUp(main, org.testng.TestRunner@363a3d15)</span>
-                <span class="method-start">34319 ms</span>
+                <span class="method-name">setUp(main, org.testng.TestRunner@4ce94d2f)</span>
+                <span class="method-start">24102 ms</span>
               </div> <!-- configuration-test before -->
               <div class="test-method">
                 <span class="method-name">accountCreation_fieldsBlank</span>
-                <span class="method-start">38125 ms</span>
+                <span class="method-start">30925 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-class after">
                 <span class="method-name">tearDown</span>
-                <span class="method-start">62256 ms</span>
+                <span class="method-start">49250 ms</span>
               </div> <!-- configuration-class after -->
             </div> <!-- chronological-class -->
             <div class="chronological-class">
               <div class="chronological-class-name">test.Android.LoginScreen.loginscreenhappypath</div> <!-- chronological-class-name -->
               <div class="configuration-test before">
-                <span class="method-name">setUp(main, org.testng.TestRunner@173f73e7)</span>
-                <span class="method-start">63111 ms</span>
+                <span class="method-name">setUp(main, org.testng.TestRunner@68ab0936)</span>
+                <span class="method-start">50310 ms</span>
               </div> <!-- configuration-test before -->
               <div class="test-method">
                 <span class="method-name">LoginScreenTest</span>
-                <span class="method-start">68141 ms</span>
+                <span class="method-start">55886 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-class after">
                 <span class="method-name">tearDown</span>
-                <span class="method-start">91468 ms</span>
+                <span class="method-start">80642 ms</span>
               </div> <!-- configuration-class after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
