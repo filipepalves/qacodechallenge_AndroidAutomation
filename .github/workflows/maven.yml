@@ -64,18 +64,27 @@ jobs:
           force-avd-creation: false
           api-level: ${{ matrix.apiLevel }}
           disable-spellchecker: true
-          emulator-target: ${{ matrix.emuTag }}
-          emulator-options: -no-window -gpu swiftshader -noaudio -no-boot-anim # Changed GPU option
+          target: ${{ matrix.emuTag }}
+          emulator-options: -no-window -gpu swiftshader -noaudio -no-boot-anim
           arch: ${{ matrix.arch }}
           disable-animations: true
-          script: |
-            echo "Starting ADB server..."
-            adb start-server
-            echo "Waiting for emulator..."
-            adb wait-for-emulator -T 60000 device
-            sleep 10
-            adb shell input keyevent 82 # Unlock screen
+          script: echo "Emulator started by reactivecircus action."
         timeout-minutes: 20
+
+      - name: Wait for Emulator Boot Completion
+        run: adb wait-for-device shell getprop sys.boot_completed | grep 1
+        timeout-minutes: 5
+
+      - name: Unlock Screen
+        run: adb shell input keyevent 82
+        continue-on-error: true
+
+      - name: Disable Animations
+        run: |
+          adb shell settings put global window_animation_scale 0.0
+          adb shell settings put global transition_animation_scale 0.0
+          adb shell settings put global animator_duration_scale 0.0
+          adb shell settings put secure spell_checker_enabled 0
 
       - name: Install Appium
         run: sudo npm install -g appium
@@ -88,9 +97,6 @@ jobs:
 
       - name: Wait for Appium Server
         run: sleep 5
-
-      - name: Check ADB Devices
-        run: adb devices -l
 
       - name: Capture logcat
         run: nohup adb logcat > logcat.log &
