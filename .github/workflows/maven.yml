@@ -73,6 +73,9 @@ jobs:
       - name: Install Appium
         run: sudo npm install -g appium
 
+      - name: Install Appium Driver - UIAutomator2
+        run: appium driver install uiautomator2
+
       - name: Start Appium server
         run: nohup appium server --port=$APPIUM_TEST_SERVER_PORT --address=$APPIUM_TEST_SERVER_HOST --relaxed-security --log-no-colors --log-timestamp 2>&1 > appium.log &
 
