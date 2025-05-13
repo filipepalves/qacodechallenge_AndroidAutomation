@@ -32,7 +32,7 @@ jobs:
           ls -R $ANDROID_HOME
 
       - name: Create and Start Android Emulator
-        uses: android-actions/start-emulator@v4
+        uses: android-actions/start-emulator@v3
         with:
           avd-name: github-actions-emulator
           emulator-options: '-no-window -gpu swiftshader -no-audio'
