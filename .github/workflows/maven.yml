@@ -69,6 +69,7 @@ jobs:
           arch: ${{ matrix.arch }}
           disable-animations: true
           script: echo "Emulator started by reactivecircus action."
+          shutdown-emulator: false
         timeout-minutes: 20
 
       - name: Wait for Emulator Boot Completion
