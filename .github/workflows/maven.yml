@@ -57,15 +57,14 @@ jobs:
           key: avd-${{ matrix.apiLevel }}
 
       - name: Create AVD and generate snapshot for caching
-        if: steps.avd-cache.outputs.cache-hit != 'true'
         uses: reactivecircus/android-emulator-runner@v2
         with:
           avd-name: ${{ env.ANDROID_AVD }}
-          force-avd-creation: false
+          force-avd-creation: true # Always create AVD
           api-level: ${{ matrix.apiLevel }}
           disable-spellchecker: true
           target: ${{ matrix.emuTag }}
-          emulator-options: -no-window -gpu swiftshader -noaudio -no-boot-anim
+          emulator-options: -no-window -gpu swiftshader -noaudio -no-boot-anim -accel auto # Added -accel auto
           arch: ${{ matrix.arch }}
           disable-animations: true
           script: echo "Emulator started by reactivecircus action."
@@ -73,7 +72,7 @@ jobs:
 
       - name: Wait for Emulator Boot Completion
         run: adb wait-for-device shell getprop sys.boot_completed | grep 1
-        timeout-minutes: 5
+        timeout-minutes: 10 # Increased boot completion timeout
 
       - name: Unlock Screen
         run: adb shell input keyevent 82
@@ -85,7 +84,7 @@ jobs:
           adb shell settings put global transition_animation_scale 0.0
           adb shell settings put global animator_duration_scale 0.0
           adb shell settings put secure spell_checker_enabled 0
-
+          
       - name: Install Appium
         run: sudo npm install -g appium
 
